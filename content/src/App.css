@@ -1,0 +1,267 @@
+.page-shell {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 10% -20%, rgba(250, 180, 88, 0.18), transparent 45%),
+    radial-gradient(circle at 95% 0%, rgba(28, 126, 214, 0.15), transparent 35%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(246, 250, 255, 0.82) 100%);
+}
+
+.badge {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.subtitle {
+  color: var(--ink-soft);
+  max-width: 680px;
+}
+
+.status-box {
+  width: 220px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.status-box p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+
+.status-box strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.status-box span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.layout {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 18px;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input,
+button {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+input {
+  min-width: 180px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--ink);
+}
+
+input:focus {
+  outline: 2px solid rgba(28, 126, 214, 0.2);
+  border-color: rgba(28, 126, 214, 0.5);
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(180deg, #1c7ed6 0%, #0b61b7 100%);
+  color: #fff;
+  border-color: #0b61b7;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+button:hover:enabled {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(11, 97, 183, 0.25);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.hint {
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mode-tabs button {
+  background: #fff;
+  color: var(--ink-soft);
+  border-color: var(--line);
+}
+
+.mode-tabs button.active {
+  color: #fff;
+  border-color: #0b61b7;
+  background: linear-gradient(180deg, #1c7ed6 0%, #0b61b7 100%);
+}
+
+.mode-body {
+  display: grid;
+  gap: 12px;
+}
+
+.check-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-soft);
+}
+
+.course-list {
+  display: grid;
+  gap: 8px;
+}
+
+.course-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 10px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.course-title {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.course-time {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.logs-panel {
+  grid-column: span 2;
+}
+
+.logs {
+  max-height: 320px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px;
+  background: rgba(252, 253, 255, 0.95);
+}
+
+.log-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 10px;
+  align-items: baseline;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.log-item+.log-item {
+  margin-top: 4px;
+}
+
+.log-item span {
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.log-item p {
+  margin: 0;
+  color: var(--ink);
+}
+
+.log-item.info {
+  background: rgba(28, 126, 214, 0.08);
+}
+
+.log-item.success {
+  background: rgba(46, 160, 67, 0.11);
+}
+
+.log-item.error {
+  background: rgba(217, 48, 37, 0.12);
+}
+
+@media (max-width: 960px) {
+  .page-shell {
+    padding: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .status-box {
+    width: 100%;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .logs-panel {
+    grid-column: span 1;
+  }
+
+  .course-item {
+    grid-template-columns: auto 1fr;
+  }
+
+  .course-time {
+    grid-column: 2;
+  }
+}

@@ -1,0 +1,36 @@
+:root {
+  --bg: #f3f7fc;
+  --ink: #0f2b46;
+  --ink-soft: #4f6980;
+  --line: #cddaea;
+  --font: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(250, 180, 88, 0.3), transparent 28%),
+    radial-gradient(circle at 85% 4%, rgba(28, 126, 214, 0.2), transparent 30%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+p {
+  margin: 0;
+}
